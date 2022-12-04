@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Toggle Example2</title>
+  <style>
+    body{
+      background-color: #456;
+      font-family: 'Times New Roman';
+      margin: 0;
+    }
+
+    .menu-nav{
+      background-color: #345;
+      width: 150px;
+      margin-left:-145px;
+      transition: 0.5s;
+    }
+
+    .menu-nav:target{
+      margin: 0px;
+    }
+
+    .menu-title{
+      color: white;
+      margin: 0;
+      padding:20px 10px;
+    }
+
+    .menu-list{
+      list-style: none;
+      margin:0;
+      padding:0;
+    }
+
+    li:first-child{
+      border-top: 1px  solid #567;
+    }
+
+    a{
+      text-decoration: none;
+      color:#ddd;
+      padding: 5px 10px;
+
+      display: block;
+      border-bottom: 1px solid #567;
+    }
+
+    a:hover{
+      color:white;
+      background-color: #234;
+    }
+
+    a::before{
+      content:"✓";
+      color: green;
+      padding-right: 5px;
+    }
+
+    .unavailable::before{
+      content: "✖";
+      color: red;
+    }
+
+    .toggler::before{
+      display: none;
+    }
+
+    .toggler{
+      width: 50px;
+      height: 50px;
+      background-color: brown;
+      border-radius:30px ;
+      text-align: center;
+      line-height: 50px;
+
+      display: inline-block;
+
+      transform: translateX(160px) translateY(-110px);
+
+    }
+    
+    
+
+  </style>
+</head>
+<body>
+
+  <nav class="menu-nav" id="menu">
+    <h2 class="menu-title">Our Cuisine</h2>
+    <ul class="menu-list">
+      <li><a href="#">Salad</a></li>
+      <li><a href="#">Soup</a></li>
+      <li><a class="unavailable" href="#">Pizza</a></li>
+      <li><a href="#">Kebab</a></li>
+      <li><a href="#">Burger</a></li>
+    </ul>
+    <a class="toggler" href="#menu">MENU</a>
+  </nav>
+  
+</body>
+</html>
