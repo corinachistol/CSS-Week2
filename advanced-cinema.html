@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Selector | Cinema</title>
+  <style>
+    body{
+      background-color: #333;
+      color: white;
+      font-family: Arial;
+    }
+
+    .cinema{
+      border: 1px dotted red;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .cinema .vip span{
+      background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Orange-Seat-icon.png);
+      width: 72px;
+      height: 72px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .vip .row a::before{
+      content: url(https://icons.iconarchive.com/icons/dooffy/characters/48/X2-icon.png);
+      display:none;
+    }
+
+    .vip .row a:hover::before{
+      display: inline;
+    }
+
+    
+
+    .cinema .main span{
+      background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+      width: 72px;
+      height: 72px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+    
+    .left-side{
+      display: inline-block;
+      
+    }
+  
+    .left-side .row a::before{
+      content: url('https://icons.iconarchive.com/icons/aha-soft/free-large-boss/48/Caucasian-Female-Boss-icon.png');
+      display: none;
+    }
+
+    .left-side .row a:hover::before{
+      display: inline;
+    }
+
+    
+    
+    
+    /*
+    .row1-chair1, .row1-chair2{
+      display: none;
+    }
+
+    a:hover .row1-chair1{
+      display: inline;
+    }
+    a:hover .row1-chair2{
+      display: inline;
+    }
+    */
+    
+    
+    
+    .right-side{
+      display: inline-block;
+      margin-left: 70px;
+    }
+
+    .right-side .row a::before{
+      content: url(https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-2/48/man-icon.png) ;
+      display:none;
+    }
+    .right-side .row a:hover::before{
+      display: inline;
+    }
+    .cinema .front span{
+      background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+      width: 72px;
+      height: 72px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .front .row a::before{
+      content: url(https://icons.iconarchive.com/icons/aha-soft/free-large-boss/48/Caucasian-Female-Boss-icon.png);
+      display: none;
+    }
+    .front .row a:hover::before{
+      display: inline;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  
+  <h1>Advanced Selector <br> Cinema</h1>
+
+  <div class="cinema">
+
+    <div class="vip">
+      <h2>VIP</h2>
+      <div class="row">
+        <span> <a href="#">1</a></span>
+        <span> <a href="#">2</a></span>
+        <span> <a href="#">3</a></span>
+        <span> <a href="#">4</a></span>
+        <span> <a href="#">5</a></span>
+        <span> <a href="#">6</a></span>
+        <span>7 <br><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-2/48/man-icon.png" alt=""></span>
+      </div>
+    </div>
+
+    <div class="main">
+      <h2>Main</h2>
+      <div class="left-side">
+        <div class="row">
+          <span> 
+            <a href="#"> 1 <img class="row1-chair1" src="https://icons.iconarchive.com/icons/aha-soft/free-large-boss/48/Caucasian-Female-Boss-icon.png" alt=""></a>
+          </span>
+          <span>
+            <a href="#"> 2 <img class="row1-chair2" src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-2/48/man-icon.png" alt=""></a>
+          </span>
+          <span> <a href="">3</a></span>
+          <span> <a href="">4</a></span>
+        </div>
+
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span>
+        </div>
+
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4
+        </div>
+      </div>
+    
+
+      <div class="right-side">
+        <div class="row">
+          <span><a href="#">5</a></span>
+          <span><a href="#">6</a></span>
+          <span><a href="#">7</a></span>
+          <span><a href="#">8</a></span>
+        </div>
+        <div class="row">
+          <span>5 <br><img src="https://icons.iconarchive.com/icons/aha-soft/free-large-boss/48/Caucasian-Female-Boss-icon.png" alt=""></span><span>6</span><span>7</span><span>8</span>
+        </div>
+        <div class="row">
+          <span>5</span><span>6</span><span>7</span><span>8</span>
+        </div>
+      </div>
+    </div>  
+      
+      
+    <div class="front">
+      <h2>Front</h2>
+      <div class="row">
+        <span><a href="#">1</a></span>
+        <span><a href="#">2</a></span>
+        <span><a href="#">3</a></span>
+        <span><a href="#">4</a></span>
+        <span><a href="#">5</a></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
