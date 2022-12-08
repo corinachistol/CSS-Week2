@@ -12,15 +12,15 @@
       cursor:pointer;
       user-select: none;
       color:rgb(31, 27, 27);
-      
-      
-      
+      text-align: center;
+        
     }
 
     nav{
       width: 150px;
-      margin: 20px 10px;
-      padding: 10px 20px;
+      padding-top: 10px;
+      margin-left: 10px;
+      text-align: center;
       background-color:#bfbfbf;
       border: 1px solid black;
       border-radius: 7px;
@@ -29,6 +29,14 @@
 
     nav label::after{
       content: "▼";
+      text-align: center;
+    }
+    label{
+      font-size:18px;
+      line-height: 150%;
+    
+      vertical-align: bottom;
+
     }
 
     nav ul{
@@ -39,22 +47,22 @@
     ul{
       list-style: none;
       padding: 0;
-      margin: 5px;
+      margin: 0;
      
       
     }
 
     li{
-      padding: 10px;
+      padding: 10px 0px;
       background-color:#f2f2f2 ;
       border-bottom:1px solid #bfbfbf;
-    
-      
+      border-radius: 5px;
+         
     }
 
     li:hover{
       background-color:#d9d9d9;
-      filter: drop-shadow(2px 2px 2px #bfbfbf)
+      filter: drop-shadow(1px 1px 1px #bfbfbf)
     }
    
     nav input{
@@ -67,6 +75,7 @@
 
     nav input:checked+label::after{
       content: "▲";
+      text-align: center;
     }
 
     a{
