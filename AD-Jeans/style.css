@@ -1,0 +1,118 @@
+/*style reset*/
+
+body,h1,p {
+  margin: 0;
+  font-family: 'Courier New';
+  
+  --transition-duration:0.5s;
+
+ 
+}
+
+body{
+  background-image: url(darkbluejeans.jpg);
+  background-position: 250% 350%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+body:target{
+  background-position: center center;
+  transition: 1s;
+}
+
+
+
+a{
+  text-decoration: none;
+}
+
+/*style layout*/
+.ad{
+  /*effects*/
+  background-image: repeating-linear-gradient(40deg, #191F40 5px ,#222A59 10px);
+  color:azure;
+ /* background-size: 10px 10px;*/
+  /*background-clip: border-box;*/
+
+  /*box*/
+  margin: 50px 100px;
+  padding: 50px;
+  
+  border-radius: 5px 5px 100px 100px;
+
+  /*content*/
+  text-align: center;
+
+  box-shadow:3px 0px 13px 3px #000000e0;
+   
+}
+
+.border{
+  padding: 20px;
+  padding-top: 350px;
+  border: 5px dashed #515255;
+  border-top:none;
+  border-radius: 5px 5px 50px 50px;
+
+  filter: drop-shadow(1px 2px 5px black);
+  
+}
+
+.title{
+   font-size: 40px;
+  margin-bottom: 50px;
+  line-height: 150%;
+}
+
+.title a{
+  background-color: transparent;
+  color: orangered;
+  padding: 10px 10px;
+  transition: var(--transition-duration);
+}
+
+.hidden{
+  display: none;
+}
+
+.title a:hover{
+  background-color: orangered;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 40px;
+
+  transition: var(--transition-duration);
+
+}
+.title .ellipsis{
+  display: inline-block;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap; 
+  vertical-align: bottom;
+  transition:width var(--transition-duration); 
+
+
+}
+
+.title a:hover .ellipsis{
+  width: 0;
+  transition: width var(--transition-duration);
+}
+
+.title .hidden{
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align:bottom;
+  transition: width var(--transition-duration);
+}
+
+.title a:hover .hidden{
+  width: 300px;
+  transition: width var(--transition-duration);
+}
+
