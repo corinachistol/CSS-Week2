@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two stage carousel | Advanced CSS Selectors</title>
+  <style>
+
+    body{
+      background-color:#234
+    }
+    .carousel{
+      width: 865px;
+      
+      
+      /*center a block horizontally*/
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+
+      overflow:hidden;
+
+      box-shadow: 0 0 5px 5px #111;
+    }
+    .carousel .slide{
+      width: 1800px;
+      transition: 1s;
+    }
+    .carousel .slide img{
+      padding: 5px 2px;
+    }
+
+    .carousel .controls{
+      text-align:center;
+      
+
+    }
+
+    .carousel .controls a{
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 10px;
+    }
+    .carousel .controls a:hover{
+      color: #8080ff;
+    }
+
+    .carousel #left:target .slide{
+      transform: translateX(0px);
+    }
+    .carousel #right:target .slide{
+      transform: translateX(-862px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+
+    <div id="left">
+      <div id="right">
+
+        <div class="slide">
+          <img src="https://i.picsum.photos/id/554/280/400.jpg?hmac=mc7Jo71IZXGERXuuWQwvw_f_VSTTg2-qwkxmXmnLyew" alt="">
+          <img src="https://i.picsum.photos/id/923/280/400.jpg?hmac=eTKbmzhwloRBIq3XY79X235D-VYGyhIAYhy5svnN5c8" alt="">
+          <img src="https://i.picsum.photos/id/516/280/400.jpg?hmac=dK99qo4FOx3za_3vm6YzH7IKrqxxvqtLRpk0ZiI0i6I" alt="">
+          <img src="https://i.picsum.photos/id/689/280/400.jpg?hmac=onFA7bA3Q03cDgyN7PNRWVc42tPDgjm_FISh8F849fk" alt="">
+          <img src="https://i.picsum.photos/id/1038/280/400.jpg?hmac=5eZ16RCWFrf2MWD_Ifd7POgqYW-ue1Jvlhlwu1bkTJc" alt="">
+          <img src="https://i.picsum.photos/id/92/280/400.jpg?hmac=OoLUt4MPGGK5mRQ0_3XateT7p_B2IGAgT1-V8nKGe1g" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      
+      <!--hm2  what if 9 pictures grupate cite 3
+      controls  [1] 2  3-->
+      <a href="#left">◀</a>
+      <a href="#right">▶</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>

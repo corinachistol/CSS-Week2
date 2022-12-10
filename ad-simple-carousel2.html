@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three stage carousel | Advanced CSS Selectors</title>
+  <style>
+    body{
+      background-color: #141f1f;
+    }
+    .carousel{
+      width: 930px;
+    
+
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 60px;
+      overflow: hidden;
+
+      box-shadow: 0 0 5px 5px #0a0f0f;
+      
+   
+    }
+    .carousel .slide{
+      width: 2800px;
+      transition: 1s;
+     
+    }
+    .carousel .slide img{
+      padding: 3px;
+      
+    }
+
+    .carousel .controls{
+      text-align: center;
+      padding: 5px;
+    }
+
+    .carousel .controls a{
+      text-decoration: none;
+      color: whitesmoke;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    .carousel .controls a:hover{
+      color: #5c8a8a;
+    }
+    
+
+    .carousel #first:target + .controls a:first-child{
+      color: #5c8a8a;
+    }
+    .carousel #second:target + .controls  a:nth-child(1+1){
+      color: green;
+    }
+    .carousel #third:target + .controls a:last-child{
+      color: red;
+    }
+  
+
+    .carousel #first:target .slide{
+      transform: translateX(0px);
+     
+      
+    }
+    .carousel #second:target .slide{
+      transform: translateX(-930px);
+   
+    }
+    .carousel #third:target .slide{
+      transform: translateX(-1860px);
+      
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+
+    <div id="first">
+      <div id="second">
+        <div id="third">
+
+          <div class="slide">
+            <img src="https://i.picsum.photos/id/445/300/450.jpg?hmac=9iTQx61rCYeqT8obbVs_50J9hOm8Y7zOAsO3B7FQNAo" alt="">
+            <img src="https://i.picsum.photos/id/923/300/450.jpg?hmac=kz3GWfRLFF7CZ3ASKFqI1eLkn9X07nAtd4qER_weIjw" alt="">
+            <img src="https://i.picsum.photos/id/127/300/450.jpg?hmac=syxMsn483uVgf9RNXBDtXlhzzVM9itLXTf7MRYKaCps" alt="">
+            <img src="https://i.picsum.photos/id/13/300/450.jpg?hmac=Fnjh7qC06r5WJNMjo8bP0zqjbfnVUkDk71i8fIGauZg" alt="">
+            <img src="https://i.picsum.photos/id/970/300/450.jpg?hmac=89WdUHDW5oQmisBPkqxPhDl17_6kvh9XAyPX68XdS-c" alt="">
+            <img src="https://i.picsum.photos/id/848/300/450.jpg?hmac=FV0aCxCnMJsWW3yNBjTojWJR0lYxCkGZ2S8Rb1SxHpA" alt="">
+            <img src="https://i.picsum.photos/id/645/300/450.jpg?hmac=HOQVmUqen6M6rYlaNvioCav_FKBpzjdKmvLfh_XgEL0" alt="">
+            <img src="https://i.picsum.photos/id/101/300/450.jpg?hmac=icaQ_-e1Gjt6Mb79aqzdfFmIC5EwFUt4icbOmXzbkSY" alt="">
+            <img src="https://i.picsum.photos/id/186/300/450.jpg?hmac=SZZcVL0PbKhe-B0s-DWKPj5vWTUK2dvjAV_F7YuqKCk" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <a href="#first">1</a>
+      <a href="#second">2</a>
+      <a href="#third">3</a>
+    </div>
+  </div>
+  
+</body>
+</html>
